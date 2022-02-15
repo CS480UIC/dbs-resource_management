@@ -4,9 +4,12 @@
 3. [Database description](#description)
 # Database
 resource_management
+
 # Author(s)
 Shreya Raj Kati
+
 Madhumitha Rajarajan
+
 # Database description
 Since this is a resource management project, Ideally we would need to collect data about the resources available and also the schools that want to use it.
 
