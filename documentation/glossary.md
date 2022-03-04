@@ -2,29 +2,64 @@
 
 
 ### Entity Name: School
-__Synonyms__ : -  
+
 __Attributes__: 
 
-__Attribute Type__: _code_ 
+__Attribute Type__: __code__
 
 maxima:1-1 minima: 1
+
 __Data type__ : VARCHAR(7)
 
-__Description__: 'code' is used to identify school which is a varchar upto 7 characters.
-Characters in code can be a mixture of alphabets and numbers. This attribute does not take NULL values and they are UNIQUE.
-It is the PRIMARY KEY attribute. 
+__Description__: 'code' is used to identify a school which is a varchar upto 7 characters.
+Characters in code can be a mixture of alphabets and numbers. This attribute is UNIQUE and does not take NULL VALUES as it is the PRIMARY KEY.
 
-_name_ maxima:M-1 minima: 1
+__Attribute Type__: __name__ 
 
-_address_ maxima:1-1 minima: 1
+maxima:M-1 minima: 1
 
-_head_ maxima:1-1 minima: 1
+__Data type__ : VARCHAR(50)
 
-_login_id_ maxima:1-1 minima: 1
+__Description__: 'name' describes the name of the school. It is a variable character attribute accepting upto 50 characters. This attribute is does not take NULL VALUES meaning it is REQUIRED attribute.
 
-_password_ maxima:M-1 minima: 1
 
-__Description__: This entity contains the information of all the schools willing to use this tool.
+__Attribute Type__: __address__
+
+maxima:1-1 minima: 1
+
+__Data type__ : VARCHAR(100)
+
+__Description__: 'address' mentions the address of the school. It is a UNIQUE and NOT NULL attribute with the datatype as VARCHAR(100)
+
+
+__Attribute Type__: __head__
+
+maxima:1-1 minima: 1
+
+__Data type__ : VARCHAR(20)
+
+__Description__: 'head' is the principal of the school who gets to manage the resources. It is a UNIQUE attributes with NOT NULL values as every school needs to assign a head to manage the resources. 
+
+
+__Attribute Type__: __login_id__
+
+maxima:1-1 minima: 1
+
+__Data type__ : VARCHAR(10)
+
+__Description__: 'login_id' contains alphanumeric characters used by the head to login. This attribute is UNIQUE and NOT NULL. It is a required attribute menaing every head should have a login ID. 
+
+
+__Attribute Type__: __password__
+
+maxima:M-1 minima: 1
+
+__Data type__ : VARCAHR(12)
+
+__Description__: 'password' contains alphanumeric characters to login. This attribute is REQUIRED and is NOT NULL. 
+
+
+__Description of entity__: This entity contains the information of all the schools willing to use this tool.
 The Head/ Pricipal can login using Login_ID and Password and then add/remove and update resources.
 
 
