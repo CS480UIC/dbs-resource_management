@@ -133,12 +133,24 @@ _school_name,_ maxima:M-1 minima: 1
 _grade,_ maxima:1-M minima: 1
 _password._ maxima:M-1 minima: 1
 __Description__: The users of this table can book resources to use.
-Typically one user/ representative is assigned to each grade and they are responsible for booking resources.
+Typically one user representative is assigned to each grade and they are responsible for booking resources. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be CASCADED to the entity resource. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
+
+
+### Entity Name: booking_employee_grade
+
+__Attributes__:
+
+__Attribute Type__: __(booking_employee_user_id,grade)__
+
+__Data type__ : VARCHAR(10)
+
+__Description__: This attribute is the primary key of this table. Since 'grade' was a plural attribute. This is put as a dependent table to the 'booking_employee' and the primary key is the composite of the foreign from the master table and the primary key of this table.
 
 
 ### Entity Name: booking
-__Synonyms__ : -  
+  
 __Attributes__: 
+
 _booking_id,_ maxima:1-1 minima: 1
 _resource_school_code,_ maxima:1-1 minima: 1
 _employee_user_id,_ maxima:1-1 minima: 1
@@ -146,12 +158,6 @@ _employee_school_code,_ maxima:1-1 minima: 1
 _resource_id,_ maxima:1-1 minima: 1
 _booked_capacity,_ maxima:1-1 minima: 1
 _booking slot_, maxima:M-1 minima: 1
-_notes._ maxima:1-1 minima: 0
-__Description__: this table contains all the current bookings done by various schools.
+_notes_ maxima:1-1 minima: 0
+__Description__: This table contains all the current bookings done by various schools. It depends on the entity 'school' and 'booking_employee' . The UPDATE in the school and booking_employee has to be CASCADED to the entity resource. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
 
-
-### Relation MaXima and Minima
-School_owns_resources: maxima/minima:1(1)-M(0)
-booking_contains_booked_resources: maxima/minima:M(0)-1(1)
-booking_employee_reserves_booking: maxima/minima:1(1)-M(0)
-booking_employee_work_for_school: maxima/minima:M(1)-1(1)
