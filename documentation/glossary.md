@@ -1,7 +1,7 @@
 ## Glossary
 
 
-### Entity Name: School
+### Entity Name: school
 
 __Attributes__: 
 
@@ -59,13 +59,20 @@ __Data type__ : VARCAHR(12)
 __Description__: 'password' contains alphanumeric characters to login. This attribute is REQUIRED and is NOT NULL. 
 
 
-__Description of entity__: This entity contains the information of all the schools willing to use this tool.
-The Head/ Pricipal can login using Login_ID and Password and then add/remove and update resources.
+__Description of entity__: School entity contains the information of all the schools willing to use this tool. 
 
+### Entity Name: resource
 
-### Entity Name: Resource
-__Synonyms__ : -  
 __Attributes__: 
+
+
+__Attribute Type__: __resource_id__
+
+maxima:1-1 minima: 1
+
+__Data type__ : VARCHAR(7)
+
+__Description__: 'resource_id' contains the ID of the resource 
 _resource_id,_ maxima:1-1 minima: 1
 _school_code,_ maxima:1-1 minima: 1
 _school_name,_ maxima:M-1 minima: 1
