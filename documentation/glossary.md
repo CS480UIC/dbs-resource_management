@@ -4,7 +4,8 @@
 ### Entity Name: School
 __Synonyms__ : -  
 __Attributes__: 
-*Code* maxima:1-1 minima: 1
+
+*code* maxima:1-1 minima: 1
 
 *Name* maxima:M-1 minima: 1
 
