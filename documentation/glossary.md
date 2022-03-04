@@ -5,17 +5,23 @@
 __Synonyms__ : -  
 __Attributes__: 
 
-*code* maxima:1-1 minima: 1
+__Attribute Type__: _code_ 
+maxima:1-1 minima: 1
+__Data type__ : VARCHAR(7)
 
-*Name* maxima:M-1 minima: 1
+__Description__: 'code' is used to identify school which is a varchar upto 7 characters.
+Characters in code can be a mixture of alphabets and numbers. This attribute does not take NULL values and they are UNIQUE.
+It is the PRIMARY KEY attribute. 
 
-*Address* maxima:1-1 minima: 1
+_name_ maxima:M-1 minima: 1
 
-*Head* maxima:1-1 minima: 1
+_address_ maxima:1-1 minima: 1
 
-*Login_ID* maxima:1-1 minima: 1
+_head_ maxima:1-1 minima: 1
 
-*Password.* maxima:M-1 minima: 1
+_login_id_ maxima:1-1 minima: 1
+
+_password_ maxima:M-1 minima: 1
 
 __Description__: This entity contains the information of all the schools willing to use this tool.
 The Head/ Pricipal can login using Login_ID and Password and then add/remove and update resources.
