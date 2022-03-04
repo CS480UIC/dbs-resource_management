@@ -6,6 +6,7 @@ __Synonyms__ : -
 __Attributes__: 
 
 __Attribute Type__: _code_ 
+
 maxima:1-1 minima: 1
 __Data type__ : VARCHAR(7)
 
