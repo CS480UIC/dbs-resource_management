@@ -66,13 +66,13 @@ __Description of entity__: 'school' entity contains the information of all the s
 __Attributes__: 
 
 
-__Attribute Type__: __resource_id__
+__Attribute Type__: __id__
 
 maxima:1-1 minima: 1
 
 __Data type__ : VARCHAR(7)
 
-__Description__: 'resource_id' contains the ID of the resource to identify them. It is a variable character of size 7. resource_id is a UNIQUE attribute with id mapping to pnly one resource and it should contain NOT NULL values as it the PRIMARY KEY of this entity.
+__Description__: 'id' contains the ID of the resource to identify them. It is a variable character of size 7. resource_id is a UNIQUE attribute with id mapping to pnly one resource and it should contain NOT NULL values as it the PRIMARY KEY of this entity.
 
 
 __Attribute Type__: __school_code__
@@ -132,7 +132,7 @@ __Attribute Type__: __user_id__
 
 maxima:1-1 minima: 1
 
-__Data type__ : VARCHAR(10)
+__Data type__ : VARCHAR(7)
 
 __Description__: 'user_id' is  a unique ID used for the employee to book a resource. It is UNIQUE and NOT NULL. Also the Primary Key of this enity.
 
@@ -141,9 +141,16 @@ __Attribute Type__: __school_code__
 
 maxima:1-1 minima: 1
 
-__Data type__ : VARCHAR(10)
+__Data type__ : VARCHAR(7)
 
 __Description__: It is the foreign key from the entity school used to identify the school of the employee. It is UNIQUE and NOT NULL.
+
+
+__Attribute_type__: __employee_name__
+
+__Data_type__: VARCHAR(20)
+
+__Description__: 'employee_name' contains the name of the employee of variable character size of 20, who is allowed to book the resource. It is NOT NULL and is a REQUIRED attribute.
 
 
 __Attribute Type__: __password__
@@ -166,12 +173,7 @@ __Attribute Type__: __(booking_employee_user_id,grade)__ PK
 
 __Data type__ : VARCHAR(10)
 
-__Attribute_type__: name
-
-__Data_type__: VARCHAR(20)
-
-
-__Description of the entity__: This attribute is the primary key of this table. Since 'grade' was a plural attribute. This is put as a dependent table to the 'booking_employee' and the primary key is the composite of the foreign from the master table and the primary key of this table.
+__Description of the entity__: This attribute is the primary key of this table. Since 'grade' was a plural attribute, this is put as a dependent table to the 'booking_employee' and the primary key is the composite of the foreign key 'booking_employee_user_id' from the master table and 'grade' of this table.
 
 
 ### Entity Name: booking
@@ -194,24 +196,6 @@ maxima:1-1 minima: 1
 __Data type__ : VARCHAR(7)
 
 __Description__: This attribute contains the user ID of the employee booking the resource. It is the foreign key from the table booking_employee. Thus all the updates from that table is cascaded here. It is a NOT NULL and UNIQUE attribute.
-
-
-__Attribute Type__: __resource_school_code__
-
-maxima:1-1 minima: 1
-
-__Data type__ : VARCHAR(7)
-
-__Description__: This attribute is the foreign key from the resource table. Conatins the school code of the resource being booked. It is NOT NULL and the updates are cascaded.
-
-
-__Attribute Type__: __employee_school_code__
-
-maxima:1-1 minima: 1
-
-__Data type__ : VARCHAR(7)
-
-__Description__: This attribute contains the school code of the employee who is booking the resource. It is a UNIQUE attrinute with NOT NULL values. All the updates are cascaded from the dependent table employee_booking. It is a FOREIGN KEY.
 
 
 __Attribute Type__: __resource_id__
