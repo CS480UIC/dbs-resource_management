@@ -191,6 +191,7 @@ __Description__: 'booking_id' is a UNIQUE ID used to identify the booking of a r
 
 
 __Attribute Type__: __employee_user_id__
+
 maxima:1-1 minima: 1
 
 __Data type__ : VARCHAR(7)
