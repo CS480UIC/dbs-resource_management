@@ -7,7 +7,7 @@ __Attributes__:
 
 __Attribute Type__: __code__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -16,7 +16,7 @@ Characters in code can be a mixture of alphabets and numbers. This attribute is 
 
 __Attribute Type__: __name__ 
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(50)
 
@@ -25,7 +25,7 @@ __Description__: 'name' describes the name of the school. It is a variable chara
 
 __Attribute Type__: __address__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(100)
 
