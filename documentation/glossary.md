@@ -12,7 +12,7 @@ _maxima:1-1 minima: 1_
 __Data type__ : VARCHAR(7)
 
 __Description__: 'code' is used to identify a school which is a varchar upto 7 characters.
-Characters in code can be a mixture of alphabets and numbers. This attribute is UNIQUE and does not take NULL VALUES as it is the PRIMARY KEY.
+Characters in code can be a mixture of alphabets and numbers. This attribute is __UNIQUE__ and does __not take NULL VALUES__ as it is the __PRIMARY KEY__.
 
 __Attribute Type__: __name__ 
 
@@ -20,7 +20,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(50)
 
-__Description__: 'name' describes the name of the school. It is a variable character attribute accepting upto 50 characters. This attribute is does not take NULL VALUES meaning it is REQUIRED attribute.
+__Description__: 'name' describes the name of the school. It is a variable character attribute accepting upto 50 characters. This attribute is __does not take NULL VALUES__ meaning it is __REQUIRED__ attribute.
 
 
 __Attribute Type__: __address__
@@ -29,7 +29,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(100)
 
-__Description__: 'address' mentions the address of the school. It is a UNIQUE and NOT NULL attribute with the datatype as VARCHAR(100)
+__Description__: 'address' mentions the address of the school. It is a __UNIQUE and NOT NULL__ attribute with the datatype as VARCHAR(100)
 
 
 __Attribute Type__: __head__
@@ -38,7 +38,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(20)
 
-__Description__: 'head' is the principal of the school who gets to manage the resources. It is a UNIQUE attributes with NOT NULL values as every school needs to assign a head to manage the resources. 
+__Description__: 'head' is the principal of the school who gets to manage the resources. It is a __UNIQUE attributes with NOT NULL__ values as every school needs to assign a head to manage the resources. 
 
 
 __Attribute Type__: __login_id__
@@ -47,7 +47,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(10)
 
-__Description__: 'login_id' contains alphanumeric characters used by the head to login. This attribute is UNIQUE and NOT NULL. It is a required attribute menaing every head should have a login ID. 
+__Description__: 'login_id' contains alphanumeric characters used by the head to login. This attribute is __UNIQUE and NOT NULL__. It is a required attribute menaing every head should have a login ID. 
 
 
 __Attribute Type__: __password__
@@ -56,7 +56,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : VARCAHR(12)
 
-__Description__: 'password' contains alphanumeric characters to login. This attribute is REQUIRED and is NOT NULL. 
+__Description__: 'password' contains alphanumeric characters to login. This attribute is __REQUIRED and is NOT NULL__. 
 
 
 __Description of entity__: 'school' entity contains the information of all the schools willing to use this tool. A head uses login_id and password to manage resources. This is an independent entity.
@@ -72,7 +72,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: 'id' contains the ID of the resource to identify them. It is a variable character of size 7. resource_id is a UNIQUE attribute with id mapping to pnly one resource and it should contain NOT NULL values as it the PRIMARY KEY of this entity.
+__Description__: 'id' contains the ID of the resource to identify them. It is a variable character of size 7. resource_id is a UNIQUE attribute with id mapping to pnly one resource and it should contain __NOT NULL values as it the PRIMARY KEY__ of this entity.
 
 
 __Attribute Type__: __school_code__
@@ -81,7 +81,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: 'school_code' is the FOREIGN KEY from the school entity. It should be UNIQUE an d should contain NOT NULL values. 
+__Description__: 'school_code' is the FOREIGN KEY from the school entity. It should be __UNIQUE and should contain NOT NULL__ values. 
 
 
 __Attribute Type__: __resource_name__
@@ -90,7 +90,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(20)
 
-__Description__: 'resource_name' describes the name of the resource with a variable character of 20. It contains NOT NULL values and is REQUIRED.
+__Description__: 'resource_name' describes the name of the resource with a variable character of 20. It contains __NOT NULL values and is REQUIRED__.
 
 
 __Attribute Type__: __resource_location__
@@ -99,7 +99,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(50)
 
-__Description__: 'resource_location' indicates the location of the resource. It is a NOT NULL attribute.
+__Description__: 'resource_location' indicates the location of the resource. It is a __NOT NULL__ attribute.
 
 
 __Attribute Type__: __full_capacity__
@@ -108,7 +108,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
-__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a NOT NULL attribute. It is a REQUIRED attribute.
+__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a __NOT NULL attribute. It is a REQUIRED attribute__.
 
 
 __Attribute Type__: __available_capacity__
@@ -117,7 +117,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
-__Description__: 'available_capacity' indicates the capacity of the resource that is available to book. It is a SMALLINT with a REQUIRED attribute. 
+__Description__: 'available_capacity' indicates the capacity of the resource that is available to book. It is a SMALLINT with a __REQUIRED__ attribute. 
 
 
 __Description of the entity__: This table records the resources of the schools that contain them. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be CASCADED to the entity resource. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
