@@ -68,7 +68,7 @@ __Attributes__:
 
 __Attribute Type__: __id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -77,7 +77,7 @@ __Description__: 'id' contains the ID of the resource to identify them. It is a 
 
 __Attribute Type__: __school_code__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -86,7 +86,7 @@ __Description__: 'school_code' is the FOREIGN KEY from the school entity. It sho
 
 __Attribute Type__: __resource_name__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(20)
 
@@ -95,7 +95,7 @@ __Description__: 'resource_name' describes the name of the resource with a varia
 
 __Attribute Type__: __resource_location__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(50)
 
@@ -104,7 +104,7 @@ __Description__: 'resource_location' indicates the location of the resource. It 
 
 __Attribute Type__: __full_capacity__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
@@ -113,7 +113,7 @@ __Description__: 'full_capacity' indicates the overall capacity of the resource.
 
 __Attribute Type__: __available_capacity__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
@@ -130,7 +130,7 @@ __Attributes__:
 
 __Attribute Type__: __user_id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -139,7 +139,7 @@ __Description__: 'user_id' is  a unique ID used for the employee to book a resou
 
 __Attribute Type__: __school_code__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -155,7 +155,7 @@ __Description__: 'employee_name' contains the name of the employee of variable c
 
 __Attribute Type__: __password__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(12)
 
@@ -183,7 +183,7 @@ __Attributes__:
 
 __Attribute Type__: __booking_id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -192,7 +192,7 @@ __Description__: 'booking_id' is a UNIQUE ID used to identify the booking of a r
 
 __Attribute Type__: __employee_user_id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -201,7 +201,7 @@ __Description__: This attribute contains the user ID of the employee booking the
 
 __Attribute Type__: __resource_id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
@@ -210,7 +210,7 @@ __Description__: This attribute is the foreign key that contas the ID of the res
 
 __Attribute Type__: __booked_capacity__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
@@ -219,7 +219,7 @@ __Description__: It indicates the capacity of the resource that is booked. It is
 
 __Attribute Type__: __booking_slot__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : DATETIME
 
@@ -228,7 +228,7 @@ __Description__: This attribute indicates the date and time of the slot that a r
 
 __Attribute Type__: __number_of_hours__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : TINYINT
 
@@ -237,7 +237,7 @@ __Description__: This contains the number of hours the resource is being booked 
 
 __Attribute Type__: __notes__
 
-maxima:1-1 minima: 0
+_maxima:1-1 minima: 0_
 
 __Data type__ : VARCHAR(150)
 
