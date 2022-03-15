@@ -34,7 +34,7 @@ __Description__: 'address' mentions the address of the school. It is a UNIQUE an
 
 __Attribute Type__: __head__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(20)
 
@@ -43,7 +43,7 @@ __Description__: 'head' is the principal of the school who gets to manage the re
 
 __Attribute Type__: __login_id__
 
-maxima:1-1 minima: 1
+_maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(10)
 
@@ -52,7 +52,7 @@ __Description__: 'login_id' contains alphanumeric characters used by the head to
 
 __Attribute Type__: __password__
 
-maxima:M-1 minima: 1
+_maxima:M-1 minima: 1_
 
 __Data type__ : VARCAHR(12)
 
