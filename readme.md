@@ -21,4 +21,4 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 # CRUD
 
-![RStudio Interface](../Screen_Shots/01-Rstudio-interface.PNG)
+![RStudio Interface](../Screen_Shots/main_page.PNG)
