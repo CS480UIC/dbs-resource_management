@@ -2,6 +2,7 @@
 1. [Database](#database)
 2. [Author(s)](#author)
 3. [Database description](#description)
+4. [Screen Shots for CRUD](# CRUD)
 # Database
 resource_management
 
@@ -18,4 +19,6 @@ We also maintain a record of employees who are permitted to book these resources
 Then there is a booking table, where me manage the booking of resources (School xyz has booked chemistry lab "A" for Friday from 2:30 to 4:00) with the information about when the resource is booked, for how much capacity it is booked and also the number of hours it is booked for is stored. 
 
 
-# Screenshots
+# CRUD
+
+![RStudio Interface](../fig/01-Rstudio-interface.PNG)
