@@ -21,7 +21,7 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 # CRUD
 
-![Main Page](../Screen_Shots/main_page.png)
+![Main Page](Screen_Shots/main_page.png)
 
 ![CRUD SCHOOL](../Screen_Shots/crud_school.png)
 
