@@ -21,4 +21,24 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 # CRUD
 
-![RStudio Interface](../Screen_Shots/main_page.PNG)
+![Main Page](../Screen_Shots/main_page.png)
+
+![CRUD SCHOOL](../Screen_Shots/crud_school.png)
+
+![Create School](../Screen_Shots/school_create.png)
+
+![Read School](../Screen_Shots/read_school.png)
+
+![Update School](../Screen_Shots/update_school.png)
+
+![Delete School](../Screen_Shots/delete_school.png)
+
+![CRUD RESOURCES](../Screen_Shots/crud_resource.png)
+
+![Create Resource](../Screen_Shots/resource_create.png)
+
+![Read Resource](../Screen_Shots/read_resource.png)
+
+![Update Resource](../Screen_Shots/update_resource.png)
+
+![Delete Resource](../Screen_Shots/delete_resource.png)
