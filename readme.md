@@ -2,7 +2,7 @@
 1. [Database](#database)
 2. [Author(s)](#author)
 3. [Database description](#description)
-4. [Screen Shots for CRUD](# CRUD)
+4. [Screen Shots for CRUD](#CRUD)
 # Database
 resource_management
 
@@ -21,4 +21,4 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 # CRUD
 
-![RStudio Interface](../fig/01-Rstudio-interface.PNG)
+![RStudio Interface](../Screen_Shots/01-Rstudio-interface.PNG)
