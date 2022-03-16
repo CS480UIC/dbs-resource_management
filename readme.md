@@ -45,20 +45,20 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 ![CRUD Booking](Screen_Shots/CRUDBooking.png)
 
-![Create Booking](Screen_Shots/Create Booking.png)
+![Create Booking](Screen_Shots/Create_Booking.png)
 
-![Read Booking](Screen_Shots/Read Booking.png)
+![Read Booking](Screen_Shots/Read_Booking.png)
 
-![Update Booking](Screen_Shots/Update Booking.png)
+![Update Booking](Screen_Shots/Update_Booking.png)
 
-![Delete Booking](Screen_Shots/Delete Booking.png)
+![Delete Booking](Screen_Shots/Delete_Booking.png)
 
-![CRUD Booking Employee](Screen_Shots/CRUD Booking Employee.png)
+![CRUD Booking Employee](Screen_Shots/CRUD_Booking_Employee.png)
 
-![Create Booking Employee](Screen_Shots/Create Booking Employee.png)
+![Create Booking Employee](Screen_Shots/Create_Booking_Employee.png)
 
-![Read Booking Employee](Screen_Shots/Read Booking Employee.png)
+![Read Booking Employee](Screen_Shots/Read_Booking_Employee.png)
 
-![Update Booking Employee](Screen_Shots/Update Booking Employee.png)
+![Update Booking Employee](Screen_Shots/Update_Booking_Employee.png)
 
-![Delete Booking](Screen_Shots/Delete Booking Employee.png)
+![Delete Booking](Screen_Shots/Delete_Booking_Employee.png)
