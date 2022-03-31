@@ -108,7 +108,7 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : SMALLINT
 
-__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a __NOT NULL attribute. It is a REQUIRED attribute__.
+__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a __NOT NULL attribute__. The full capacity should be greater than zero. SO we place a __CHECK__ Constraint
 
 
 __Attribute Type__: __available_capacity__
