@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read School</title>
+    <title>Delete Entity</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,21 +21,20 @@
   </head>
   
   <body>
-  <h1>Read School</h1>
+  <h1>Delete Entity Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
-	<input type="hidden" name="method" value="regist"/>
-	School ID    :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+	<input type="hidden" name="method" value="delete"/>
+		<input type="hidden" name="username" value="${entity1.username }"/>
+	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
 	<br/>
-<%-- 	Password：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	
+	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/> --%>
-	<input type="submit" value="Read School"/>
+	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	<br/>
+	<input type="submit" value="Delete Entity1"/>
 </form>
-  </body>
-</html>
 
+</body>
+</html>

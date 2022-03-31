@@ -5,9 +5,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="">
     
-    <title>body</title>
+    <title>Update Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,13 +21,13 @@
   </head>
   
   <body>
-    <h1>CRUD operations for resources </h1>
-    <br>
-	<a href="<c:url value='/jsps/resources/resources_create.jsp'/>" target="_parent">Create Resources</a> |&nbsp; 
-	<a href="<c:url value='/jsps/resources/resources_read.jsp'/>" target="_parent">Read Resources</a> |&nbsp;
-	<a href="<c:url value='/jsps/resources/resources_update.jsp'/>" target="_parent">Update Resources</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/resources/resources_delete.jsp'/>" target="_parent">Delete Resources</a>	
-	    
+  <h1>Update</h1>
+<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
+	<input type="hidden" name="method" value="search"/>
+	Update User   :<input type="text" name="username" value="${form.username }"/>
+	<span style="color: red; font-weight: 900">${errors.username }</span>
+	<br/>
+	<input type="submit" value="Update Resource"/>
+</form>
   </body>
 </html>
- 

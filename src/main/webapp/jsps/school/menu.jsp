@@ -22,13 +22,12 @@
   </head>
   
   <body>
-    <h1>CRUD operations for school </h1>
+    <h1>CRUD operations for School </h1>
     <br>
-	<a href="<c:url value='/jsps/school/school_create.jsp'/>" target="_parent">Create school</a> |&nbsp; 
-	<a href="<c:url value='/jsps/school/school_read.jsp'/>" target="_parent">Read school</a> |&nbsp;
-	<a href="<c:url value='/jsps/school/school_update.jsp'/>" target="_parent">Update school</a> |&nbsp;	 
-	<a href="<c:url value='/jsps/school/school_delete.jsp'/>" target="_parent">Delete school</a>	
+	<a href="<c:url value='/jsps/school/schoolcreate.jsp'/>" target="_parent">Create School</a> |&nbsp; 
+	<a href="<c:url value='/jsps/school/schoolread.jsp'/>" target="_parent">Read School</a> |&nbsp;
+	<a href="<c:url value='/jsps/school/schoolupdate.jsp'/>" target="_parent">Update School</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/school/schooldelete.jsp'/>" target="_parent">Delete School</a>	
 	    
   </body>
 </html>
-

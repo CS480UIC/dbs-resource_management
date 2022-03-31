@@ -22,7 +22,7 @@
   </head>
   
   <body>
-    <h1>Managing the resources between different schools in a community.</h1>
+    <h1>Managing the resources between different schools in a community</h1>
     
   </body>
 </html>

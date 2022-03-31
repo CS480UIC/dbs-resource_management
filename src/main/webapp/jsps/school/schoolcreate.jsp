@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>School Create</title>
+    <title>Create School</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,31 +21,27 @@
   </head>
   
   <body>
-  <h1>Resources Create</h1>
+  <h1>Create School</h1>
 <form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	resource_id    :<input type="text" name="school_code" value="${form.username }"/>
+	School Code: <input type="text" name="username" value="${form.username }"/>
 	<span style="color: red; font-weight: 900">${errors.username }</span>
 	<br/>
-	School Code：<input type="text" name="name" value="${form.password }"/>
+	Name：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
 	<br/>
-	resource_name	：<input type="text" name="email" value="${form.email }"/>
+	Address：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<br/>
-	resource_location	：<input type="text" name="email" value="${form.email }"/>
+	Head：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<br/>
-	full_capacity	：<input type="text" name="email" value="${form.email }"/>
+	LoginID：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<br/>
-	available_capacity	：<input type="password" name="email" value="${form.email }"/>
+	Password：<input type="text" name="email" value="${form.email }"/>
 	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
-	<input type="submit" value="Create resource"/>
+	<input type="submit" value="Create School"/>
 </form>
   </body>
 </html>
-

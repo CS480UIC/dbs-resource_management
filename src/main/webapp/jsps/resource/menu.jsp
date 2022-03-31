@@ -2,12 +2,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <base href="">
     
-    <title>Update Resource</title>
+    <title>body</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -22,13 +22,12 @@
   </head>
   
   <body>
-  <h1>Update</h1>
-<form action="<c:url value='/Entity1ServletUpdate'/>" method="post">
-	<input type="hidden" name="method" value="search"/>
-	Update Resource   :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
-	<br/>
-	<input type="submit" value="Update resource"/>
-</form>
+    <h1>CRUD operations for Resource </h1>
+    <br>
+	<a href="<c:url value='/jsps/resource/resourcecreate.jsp'/>" target="_parent">Create Resource</a> |&nbsp; 
+	<a href="<c:url value='/jsps/resource/resourceread.jsp'/>" target="_parent">Read Resource</a> |&nbsp;
+	<a href="<c:url value='/jsps/resource/resourceupdate.jsp'/>" target="_parent">Update Resource</a> |&nbsp;	 
+	<a href="<c:url value='/jsps/resource/resourcedelete.jsp'/>" target="_parent">Delete Resource</a>	
+	    
   </body>
 </html>
