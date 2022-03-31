@@ -1,4 +1,8 @@
-First Normal Form - All non-key columns depend on primary key
+First Normal Form - 
+            "All non-key columns depend on primary key."
+            
+ The tables are in First Normal Form as any table can be considered to be in first normal form as long as it has a primary key.
+
 
 Second Normal Form - The second normal form states that - 
             "A table is in second normal form when all non-key columns depend on the whole primary key."
