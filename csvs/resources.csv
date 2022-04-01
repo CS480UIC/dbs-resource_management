@@ -1,0 +1,6 @@
+Timestamp,resource_id,School Code,resource_name,resource_location,full_capacity,available_capacity
+3/3/2022 21:17:39,r321,a123,Computers,100 N Broadway Ave,20,7
+3/3/2022 21:56:22,pin358947,CHI60607,Chem lab,770 S Halsted,25,3
+3/3/2022 21:58:14,pindec459807,UIC80009,basketball field,890 S monroe street,24,24
+3/3/2022 21:58:58,coe3265789,UIUC12345,Computer labs,650 S Halsted,50,7
+3/3/2022 21:59:55,swin2786,UIS88993475,Swimming pool,440 W Madison,50,50
