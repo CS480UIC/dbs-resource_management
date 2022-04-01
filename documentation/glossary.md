@@ -106,21 +106,21 @@ __Attribute Type__: __full_capacity__
 
 _maxima:M-1 minima: 1_
 
-__Data type__ : SMALLINT
+__Data type__ : SMALLINT UNSIGNED
 
-__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a __NOT NULL attribute__. The full capacity should be greater than zero. SO we place a __CHECK__ Constraint
+__Description__: 'full_capacity' indicates the overall capacity of the resource. It is indicated in numbers and is a __NOT NULL attribute__. The full capacity should be greater than zero. So we place a __CHECK__ Constraint
 
 
 __Attribute Type__: __available_capacity__
 
 _maxima:M-1 minima: 1_
 
-__Data type__ : SMALLINT
+__Data type__ : SMALLINT UNSIGNED
 
-__Description__: 'available_capacity' indicates the capacity of the resource that is available to book. It is a SMALLINT with a __REQUIRED__ attribute. 
+__Description__: 'available_capacity' indicates the capacity of the resource that is available to book. It is a __NOT NULL__ attribute. 
 
 
-__Description of the entity__: This table records the resources of the schools that contain them. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be CASCADED to the entity resource. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
+__Description of the entity__: This table records the resources of the schools that contain them. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be CASCADED to the entity resource. Cascade on primary key update and delete. 
 
 
 ### Entity Name: booking_employee
@@ -134,7 +134,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: 'user_id' is  a unique ID used for the employee to book a resource. It is UNIQUE and NOT NULL. Also the Primary Key of this enity.
+__Description__: 'user_id' is  a unique ID used for the employee to book a resource. It is __UNIQUE and NOT NULL__. Also the __PRIMARY KEY__ of this enity.
 
 
 __Attribute Type__: __school_code__
@@ -143,14 +143,14 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: It is the foreign key from the entity school used to identify the school of the employee. It is UNIQUE and NOT NULL.
+__Description__: It is the foreign key from the entity school used to identify the school of the employee. It is __UNIQUE and NOT NULL__.
 
 
 __Attribute_type__: __employee_name__
 
 __Data_type__: VARCHAR(20)
 
-__Description__: 'employee_name' contains the name of the employee of variable character size of 20, who is allowed to book the resource. It is NOT NULL and is a REQUIRED attribute.
+__Description__: 'employee_name' contains the name of the employee of variable character size of 20, who is allowed to book the resource. It is __NOT NULL__ and is a REQUIRED attribute.
 
 
 __Attribute Type__: __password__
@@ -159,10 +159,10 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : VARCHAR(12)
 
-__Description__: Used to login by the employee. It is NOT NULL and is a REQUIRED attribute.
+__Description__: Used to login by the employee. It is __NOT NULL__ and is a REQUIRED attribute.
 
 __Description of the entity__: The users of this entity are employees who can book resources to use.
-Typically one user representative is assigned to each grade and they are responsible for booking resources. The attribute 'grade' from this entity is a plural attribute and thus it is been implemented as a dependent entity 'booking_employee_grade'. This entity depends on the entity 'school' and has the foreign key school_code to identify the school of the employee. The changes in the school has to be CASCADED to the entity booking_employee. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
+Typically one user representative is assigned to each grade and they are responsible for booking resources. The attribute 'grade' from this entity is a plural attribute and thus it is been implemented as a dependent entity 'booking_employee_grade'. This entity depends on the entity 'school' and has the foreign key school_code to identify the school of the employee. The changes in the school has to be CASCADED to the entity booking_employee. 
 
 
 ### Entity Name: booking_employee_grade
@@ -187,7 +187,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: 'booking_id' is a UNIQUE ID used to identify the booking of a resource. It is the PRIMARY KEY of this entity and thus is NOT NULL and REQUIRED.
+__Description__: 'booking_id' is a UNIQUE ID used to identify the booking of a resource. It is the PRIMARY KEY of this entity and thus is __NOT NULL__ and REQUIRED.
 
 
 __Attribute Type__: __employee_user_id__
@@ -196,7 +196,7 @@ _maxima:1-1 minima: 1_
 
 __Data type__ : VARCHAR(7)
 
-__Description__: This attribute contains the user ID of the employee booking the resource. It is the foreign key from the table booking_employee. Thus all the updates from that table is cascaded here. It is a NOT NULL and UNIQUE attribute.
+__Description__: This attribute contains the user ID of the employee booking the resource. It is the foreign key from the table booking_employee. Thus all the updates from that table is cascaded here. It is a __NOT NULL__ and __UNIQUE__ attribute.
 
 
 __Attribute Type__: __resource_id__
@@ -212,9 +212,9 @@ __Attribute Type__: __booked_capacity__
 
 _maxima:M-1 minima: 1_
 
-__Data type__ : SMALLINT
+__Data type__ : SMALLINT UNSIGNED
 
-__Description__: It indicates the capacity of the resource that is booked. It is a NOT NULL and REQUIRED attribute.
+__Description__: It indicates the capacity of the resource that is booked. It is a __NOT NULL__ and REQUIRED attribute. A __CHECK__ Constraint is placed to check if the booked_capacity is greater than 0.
 
 
 __Attribute Type__: __booking_slot__
@@ -223,16 +223,15 @@ _maxima:M-1 minima: 1_
 
 __Data type__ : DATETIME
 
-__Description__: This attribute indicates the date and time of the slot that a resource is being booked for. It is a REQUIRED attribute with NOT NULL values. 
-
+__Description__: This attribute indicates the date and time of the slot that a resource is being booked for. It is a REQUIRED attribute with __NOT NULL__ values.
 
 __Attribute Type__: __number_of_hours__
 
 _maxima:M-1 minima: 1_
 
-__Data type__ : TINYINT
+__Data type__ : TINYINT UNSIGNED
 
-__Description__: This contains the number of hours the resource is being booked for starting from the booking slot time. It is a REQUIRED and NOT NULL attribute
+__Description__: This contains the number of hours the resource is being booked for starting from the booking slot time. It is a REQUIRED and __NOT NULL__ attribute.  A __CHECK constraint__ is placed to check if the number of hours booked is grater than 0.
 
 
 __Attribute Type__: __notes__
@@ -243,4 +242,4 @@ __Data type__ : VARCHAR(150)
 
 __Description__: This contains extra specifications which is optional. It can contain NULL values.
 
-__Description of the entity__: This table contains all the current bookings done by various schools. It depends on the entity 'school' and 'booking_employee' . The UPDATE in the school and booking_employee has to be CASCADED to the entity resource. Cascade on primary key update and delete and Restrict on foreign key insert and update. 
+__Description of the entity__: This table contains all the current bookings done by various schools. It depends on the entity 'school' and 'booking_employee' . The UPDATE in the school and booking_employee has to be CASCADED to the entity resource. Cascade on primary key update and delete.
