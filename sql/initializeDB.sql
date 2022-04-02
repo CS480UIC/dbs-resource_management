@@ -184,7 +184,7 @@ CREATE TABLE `school` (
 
 LOCK TABLES `school` WRITE;
 /*!40000 ALTER TABLE `school` DISABLE KEYS */;
-INSERT INTO `school` VALUES ('A123','ABC International','100 N Broadway Ave','Rhea Ballard','fio7','rheaballard'),('CHI606','Chicago elementary','770 S Halsted','Sandy ','skati1','sandy'),('UIC8','UIC','890 S monroe street','Torim White','diana25','torimwhite'),('UIS8','UIS','440 W Madison','Lupita lopez','katie','lupilopez'),('UIUC123','UIUC','650 S Halsted','Steve Maxwel','hanset','steve');
+INSERT INTO `school` VALUES ('A123','ABC International','100 N Broadway Ave','Rhea Ballard','fio7','rheaballard'),('CHI606','Chicago elementary','770 S Halsted','Sandy','skati1','sandy'),('UIC8','UIC','890 S monroe street','Torim White','diana25','torimwhite'),('UIS8','UIS','440 W Madison','Lupita lopez','katie','lupilopez'),('UIUC123','UIUC','650 S Halsted','Steve Maxwel','hanset','steve');
 /*!40000 ALTER TABLE `school` ENABLE KEYS */;
 UNLOCK TABLES;
 
