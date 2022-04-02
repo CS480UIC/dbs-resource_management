@@ -1,0 +1,6 @@
+Timestamp,booking_id,employee_user_id,resource_id,booked_capacity,booking_slot,number_of_hours,notes
+3/3/2022 21:23:28,id12,skati6,cmp321,13,2022-04-26 15:00:00,2,required for 2 hours
+3/3/2022 21:36:45,id13,maddie7,chem35,22,2022-04-12 13:30:00,3,null
+3/3/2022 21:38:16,id14,kate22,bf34,24,2022-04-15 09:00:00,3,required for 3 hours
+3/3/2022 21:40:54,id15,diana36,cl324,43,2022-04-25 14:00:00,3,null
+3/3/2022 21:42:02,id16,ahmad12,sw2786,50,2022-04-25 15:00:00,2,Swimming pool has to be cleaned
