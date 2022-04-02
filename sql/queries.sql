@@ -7,7 +7,7 @@ CREATE VIEW available_resource AS
     ORDER BY id;
         
 CREATE VIEW school_details AS 
-	select name, address from school where head LIKE 'Sandy';
+	select name, address from school where head = 'Sandy';
     
 #7.2
 
