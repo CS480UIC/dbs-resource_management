@@ -9,7 +9,7 @@ CREATE VIEW available_resource AS
 CREATE VIEW school_details AS 
 	select name, address from school where head = 'Sandy';
     
-#7.2
+##7.2
 
 CREATE VIEW hour_booked AS
 	SELECT COUNT(*) AS booked_resources,number_of_hours
