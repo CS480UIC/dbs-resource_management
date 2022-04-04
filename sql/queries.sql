@@ -1,4 +1,4 @@
-#7.1
+##7.1
 
 CREATE VIEW available_resource AS
 	SELECT id,resource_name,available_capacity
