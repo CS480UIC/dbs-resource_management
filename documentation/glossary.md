@@ -120,7 +120,7 @@ __Data type__ : SMALLINT UNSIGNED
 __Description__: 'available_capacity' indicates the capacity of the resource that is available to book. It is a __NOT NULL__ attribute. 
 
 
-__Description of the entity__: This table records the resources of the schools that contain them. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be CASCADED to the entity resource. Cascade on primary key update and delete. 
+__Description of the entity__: This table records the resources of the schools that contain them. It depends on the entity 'school' and has the foreign key school_code to identify the school that contains the resource. The changes in the school has to be __CASCADED__ to the entity resource. Cascade on primary key update and delete. 
 
 
 ### Entity Name: booking_employee
