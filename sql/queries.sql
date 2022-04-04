@@ -1,4 +1,4 @@
-##7.1
+## 7.1
 
 CREATE VIEW available_resource AS
 	SELECT id,resource_name,available_capacity
@@ -9,7 +9,7 @@ CREATE VIEW available_resource AS
 CREATE VIEW school_details AS 
 	select name, address from school where head = 'Sandy';
     
-##7.2
+## 7.2
 
 CREATE VIEW hour_booked AS
 	SELECT COUNT(*) AS booked_resources,number_of_hours
@@ -21,7 +21,7 @@ CREATE VIEW booking_details AS
 	select CONCAT(booking_slot,' for ',number_of_hours,' hours') as slot_booked from booking where TIME(booking_slot)='15:00:00';
 
     
-# 7.3
+## 7.3
 
 CREATE VIEW booked_view AS
 	SELECT employee_name 
