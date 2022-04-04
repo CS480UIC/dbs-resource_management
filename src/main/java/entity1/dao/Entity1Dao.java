@@ -104,6 +104,7 @@ public class Entity1Dao {
 	}
 	
 	
+	
 	/**
 	 * @param username
 	 * @throws ClassNotFoundException
