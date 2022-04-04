@@ -6,7 +6,7 @@
 # Database
 resource_management
 
-# Author(s)
+# Authors
 Shreya Raj Kati
 
 Madhumitha Rajarajan
