@@ -18,4 +18,4 @@ __Boyce-Codd Normal Form__ -
 
 Our tables complies with Boyce-Codd Normal Form as we have all columns depending on the primary key of the tables alone.
 
-With this, we show that our tables are normalized to the accpeted level
+With this, we show that our __tables are normalized to the accepted level__
