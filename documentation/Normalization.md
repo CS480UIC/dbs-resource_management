@@ -9,7 +9,7 @@ __Second Normal Form__ -
 The tables in the database are already in second normal form, as all our non-key coloumns depend on the whole primary key.
 
 __Third Normal Form__ - 
-             "A table is in third normal form if, whenever a non-key column A depends on column B, then B is unique. Columns A and B may be simple or composite."
+             _"A table is in third normal form if, whenever a non-key column A depends on column B, then B is unique. Columns A and B may be simple or composite."_
 
 The tables are in third normal form. We say this because we do not have any non-key column that depends on another non-key column. All our columns depend on the primary key.
 
