@@ -14,6 +14,6 @@ __Third Normal Form__ -
 The tables are in third normal form. We say this because we do not have any non-key column that depends on another non-key column. All our columns depend on the primary key.
 
 __Boyce-Codd Normal Form__ - 
-            "A table is in Boyce-Codd normal form if, whenever column A depends on column B, then B is unique. Columns A and B may be simple or composite."
+            _"A table is in Boyce-Codd normal form if, whenever column A depends on column B, then B is unique. Columns A and B may be simple or composite."_
 
 Our tables complies with Boyce-Codd Normal Form as we have all columns depending on the primary key of the tables alone.
