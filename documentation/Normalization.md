@@ -1,5 +1,5 @@
 __First Normal Form__ - 
-            "All non-key columns depend on primary key."
+            _"All non-key columns depend on primary key."_
             
 We checked that all our tables have a primary key. Thus, it's in First Normal Form.
 
