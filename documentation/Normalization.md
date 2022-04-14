@@ -4,7 +4,7 @@ __First Normal Form__ -
 We checked that all our tables have a primary key. Thus, it's in First Normal Form.
 
 __Second Normal Form__ - 
-            "A table is in second normal form when all non-key columns depend on the whole primary key."
+            _"A table is in second normal form when all non-key columns depend on the whole primary key."_
 
 The tables in the database are already in second normal form, as all our non-key coloumns depend on the whole primary key.
 
