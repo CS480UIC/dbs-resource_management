@@ -17,3 +17,5 @@ __Boyce-Codd Normal Form__ -
             _"A table is in Boyce-Codd normal form if, whenever column A depends on column B, then B is unique. Columns A and B may be simple or composite."_
 
 Our tables complies with Boyce-Codd Normal Form as we have all columns depending on the primary key of the tables alone.
+
+With this, we show that our tables are normalized to the accpeted level
