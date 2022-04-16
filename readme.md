@@ -43,7 +43,7 @@ Then there is a booking table, where me manage the booking of resources (School 
 
 ![Delete Resource](Screen_Shots/delete_resource.png)
 
-![CRUD Booking](Screen_Shots/CRUDBooking.png)
+![CRUD Booking](Screen_Shots/CRUD_Booking.png)
 
 ![Create Booking](Screen_Shots/Create_Booking.png)
 
