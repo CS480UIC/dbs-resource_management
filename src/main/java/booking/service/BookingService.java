@@ -57,5 +57,8 @@ public class BookingService {
 	public List<Object> findBookedResources() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		return bookingDao.findBookedResources();
 		}
+	public List<Object> findMax() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return bookingDao.findMax();
+		}
 
 }

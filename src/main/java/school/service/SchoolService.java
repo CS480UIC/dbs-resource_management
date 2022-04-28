@@ -1,6 +1,8 @@
 package school.service;
 
 
+import java.util.List;
+
 import school.dao.SchoolDao;
 import school.domain.School;
  public class SchoolService {
@@ -19,23 +21,10 @@ import school.domain.School;
 		if(school.getCode()!=null && school.getCode().equals(form.getCode())) throw new SchoolException("This school has been registered!");
 		schoolDao.add(form);
 	}
-	/**
-	 * Login function
-	 * @param form
-	 * @return
-	 * @throws UserException 
-	 * @throws ClassNotFoundException 
-	 * @throws IllegalAccessException 
-	 * @throws InstantiationException 
-	 */
-	/*public void login(School form) throws SchoolException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		School user = schoolDao.findByCode(form.getCode());
-		if(user.getCode()==null) throw new SchoolException("This school was not found in the database");
-		
-		String password = user.getPassword();
-		
-		if(password!=null && !password.equals(form.getPassword()))
-			throw new SchoolException(" The password is not right");
-		
-	} */
+
+
+
+	public List<Object> findSchoolName() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		return schoolDao.findSchoolName();
+		}
 }

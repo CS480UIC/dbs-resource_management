@@ -76,11 +76,11 @@ public class ResourceServletUpdate extends HttpServlet {
 				String[] values = paramMap.get(name);
 				info.add(values[0]);
 			}
-			form.setSchool_code(info.get(2));
-			form.setResource_name(info.get(3));
-			form.setResource_location(info.get(4));
-			form.setFull_capacity(Integer.parseInt(info.get(5)));
-			form.setAvailable_capacity(Integer.parseInt(info.get(6)));
+		//	form.setSchool_code(info.get(2));
+			form.setResource_name(info.get(2));
+			form.setResource_location(info.get(3));
+			form.setFull_capacity(Integer.parseInt(info.get(4)));
+			form.setAvailable_capacity(Integer.parseInt(info.get(5)));
 			form.setId(request.getParameter("id"));
 
 			try {

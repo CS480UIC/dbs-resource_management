@@ -41,7 +41,7 @@ public class SchoolServletDelete extends HttpServlet {
 		if(method.equals("search"))
 		{
 			try {
-				school = schoolDao.findByCode(request.getParameter("username"));
+				school = schoolDao.findByCode(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			} catch (InstantiationException e1) {
@@ -63,6 +63,9 @@ public class SchoolServletDelete extends HttpServlet {
 		else if(method.equals("delete"))
 		{	
 			try {
+				System.out.println("deletimg" + request.getParameter("code"));
+				
+				
 				schoolDao.delete(request.getParameter("code"));
 			} catch (ClassNotFoundException e1) {
 				e1.printStackTrace();

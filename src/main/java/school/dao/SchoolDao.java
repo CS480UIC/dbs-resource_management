@@ -5,14 +5,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-
-
+import resource.domain.Resource;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import school.domain.School;
+import school.domain.SchoolName;
 
 /**
  * DDL functions performed in database
@@ -33,7 +35,7 @@ public class SchoolDao {
 		School school = new School();
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_name);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_name);
 		    String sql = "select * from school where code=?";
 		    PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,code);
@@ -68,7 +70,7 @@ public class SchoolDao {
 	public void add(School form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_name);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_name);
 			
 			String sql = "insert into school values(?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -95,7 +97,7 @@ public class SchoolDao {
 	public void update(School form) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_name);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_name);
 			
 			String sql = "UPDATE school SET name = ?, address = ?, head = ?, login_id = ?, password = ? where code = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -119,10 +121,11 @@ public class SchoolDao {
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 */
+	
 	public void delete(String code) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/bookstore", MySQL_user, MySQL_name);
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_name);
 			
 			String sql = "delete from school where code = ?";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
@@ -132,5 +135,27 @@ public class SchoolDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findSchoolName() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_name);
+			String sql = "select s.name, count(*) as number_of_resource from school as s join resource as r where s.code = r.school_code group by r.school_code";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				SchoolName schoolname = new SchoolName();
+			
+				schoolname.setName(resultSet.getString("name"));
+				schoolname.setNumber_of_resource(resultSet.getInt("number_of_resource"));
+	    		list.add(schoolname);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

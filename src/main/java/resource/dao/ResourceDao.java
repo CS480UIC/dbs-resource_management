@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import resource.domain.Resource;
+import user.domain.User;
 
 /**
  * DDL functions performed in database
@@ -70,7 +70,7 @@ public class ResourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_password);
 			
-			String sql = "insert into resource values(?,?,?,?,?)";
+			String sql = "insert into resource values(?,?,?,?,?,?)";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
 		    preparestatement.setString(1,form.getId());
 		    preparestatement.setString(2,form.getSchool_code());
@@ -97,14 +97,14 @@ public class ResourceDao {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_password);
 			
-			String sql = "UPDATE resource SET school_code = ?, resource_name = ?, resource_location = ?, full_capacity = ?, available_capacity = ?  where id = ?;";
+			String sql = "UPDATE resource SET resource_name = ?, resource_location = ?, full_capacity = ?, available_capacity = ?  where id = ?;";
 			PreparedStatement preparestatement = connect.prepareStatement(sql); 
-		    preparestatement.setString(1,form.getSchool_code());
-			preparestatement.setString(2,form.getResource_name());
-			preparestatement.setString(3,form.getResource_location());
-			preparestatement.setInt(4,form.getFull_capacity());
-			preparestatement.setInt(5,form.getAvailable_capacity());
-		    preparestatement.setString(6,form.getId());
+		   // preparestatement.setString(1,form.getSchool_code());
+			preparestatement.setString(1,form.getResource_name());
+			preparestatement.setString(2,form.getResource_location());
+			preparestatement.setInt(3,form.getFull_capacity());
+			preparestatement.setInt(4,form.getAvailable_capacity());
+		    preparestatement.setString(5,form.getId());
 		    preparestatement.executeUpdate();
 		    connect.close();
 		} catch(SQLException e) {
@@ -132,5 +132,29 @@ public class ResourceDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+
+	public List<Object> findAvailableResource() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_password);
+			String sql = "select id,resource_name,available_capacity from resource where available_capacity > 10";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Resource resource = new Resource();
+				resource.setId(resultSet.getString("id"));
+				resource.setResource_name(resultSet.getString("resource_name"));
+				resource.setAvailable_capacity(resultSet.getInt("available_capacity"));
+	    		list.add(resource);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
+		
 	}
 }

@@ -158,8 +158,6 @@ public class BookingDao {
 	}
 
 
-
-
 	public List<Object> findBookedResources() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
 		List<Object> list = new ArrayList<>();
 		try {
@@ -182,6 +180,30 @@ public class BookingDao {
 		}
 		return list;
 		
+	}
+
+
+
+	public List<Object> findMax() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_password);
+			String sql = "select resource_id, number_of_hours from booking where number_of_hours = (select max(number_of_hours) from booking)";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Booking booking = new Booking();
+				booking.setResource_id(resultSet.getString("resource_id"));
+				booking.setNumber_of_hours(resultSet.getInt("number_of_hours"));
+				
+	    		list.add(booking);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 
 }
