@@ -1,52 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
   <display-name>CS480 Demo</display-name>
+  
     <servlet>
     <description></description>
-    <display-name>Entity1ServletCreate</display-name>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletCreate</servlet-class>
+    <display-name>SchoolServletCreate</display-name>
+    <servlet-name>SchoolServletCreate</servlet-name>
+  
+    
+    <servlet-class>school.web.servlet.SchoolServletCreate</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletCreate</servlet-name>
-    <url-pattern>/Entity1ServletCreate</url-pattern>
+    <servlet-name>SchoolServletCreate</servlet-name>
+    <url-pattern>/SchoolServletCreate</url-pattern>
   </servlet-mapping>
   
   <servlet>
     <description></description>
-    <display-name>Entity1ServletRead</display-name>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletRead</servlet-class>
+    <display-name>SchoolServletRead</display-name>
+    <servlet-name>SchoolServletRead</servlet-name>
+    <servlet-class>school.web.servlet.SchoolServletRead</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletRead</servlet-name>
-    <url-pattern>/Entity1ServletRead</url-pattern>
+    <servlet-name>SchoolServletRead</servlet-name>
+    <url-pattern>/SchoolServletRead</url-pattern>
   </servlet-mapping>
   
+    <servlet>
+    <description></description>
+    <display-name>SchoolServletUpdate</display-name>
+    <servlet-name>SchoolServletUpdate</servlet-name>
+    <servlet-class>school.web.servlet.SchoolServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SchoolServletUpdate</servlet-name>
+    <url-pattern>/SchoolServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>SchoolServletDelete</display-name>
+    <servlet-name>SchoolServletDelete</servlet-name>
+    <servlet-class>school.web.servlet.SchoolServletDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SchoolServletDelete</servlet-name>
+    <url-pattern>/SchoolServletDelete</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>ResourceServletCreate</display-name>
+    <servlet-name>ResourceServletCreate</servlet-name>
+    <servlet-class>resource.web.servlet.ResourceServletCreate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResourceServletCreate</servlet-name>
+    <url-pattern>/ResourceServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>ResourceServletRead</display-name>
+    <servlet-name>ResourceServletRead</servlet-name>
+    <servlet-class>resource.web.servlet.ResourceServletRead</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResourceServletRead</servlet-name>
+    <url-pattern>/ResourceServletRead</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>ResourceServletUpdate</display-name>
+    <servlet-name>ResourceServletUpdate</servlet-name>
+    <servlet-class>resource.web.servlet.ResourceServletUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResourceServletUpdate</servlet-name>
+    <url-pattern>/ResourceServletUpdate</url-pattern>
+  </servlet-mapping>
   
   
     <servlet>
     <description></description>
-    <display-name>Entity1ServletUpdate</display-name>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletUpdate</servlet-class>
+    <display-name>ResourceServletDelete</display-name>
+    <servlet-name>ResourceServletDelete</servlet-name>
+    <servlet-class>resource.web.servlet.ResourceServletDelete</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Entity1ServletUpdate</servlet-name>
-    <url-pattern>/Entity1ServletUpdate</url-pattern>
+    <servlet-name>ResourceServletDelete</servlet-name>
+    <url-pattern>/ResourceServletDelete</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>BookingServletCreate</display-name>
+    <servlet-name>BookingServletCreate</servlet-name>
+    <servlet-class>booking.web.servlet.BookingServletCreate</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BookingServletCreate</servlet-name>
+    <url-pattern>/BookingServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BookingServletRead</display-name>
+    <servlet-name>BookingServletRead</servlet-name>
+    <servlet-class>booking.web.servlet.BookingServletRead</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BookingServletRead</servlet-name>
+    <url-pattern>/BookingServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BookingServletUpdate</display-name>
+    <servlet-name>BookingServletUpdate</servlet-name>
+    <servlet-class>booking.web.servlet.BookingServletUpdate</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BookingServletUpdate</servlet-name>
+    <url-pattern>/BookingServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>BookingServletDelete</display-name>
+    <servlet-name>BookingServletDelete</servlet-name>
+    <servlet-class>booking.web.servlet.BookingServletDelete</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>BookingServletDelete</servlet-name>
+    <url-pattern>/BookingServletDelete</url-pattern>
   </servlet-mapping>
   
   
-    <servlet>
+   <servlet>
     <description></description>
-    <display-name>Entity1ServletDelete</display-name>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <servlet-class>entity1.web.servlet.Entity1ServletDelete</servlet-class>
+    <display-name>Booking_EmployeeServletCreate</display-name>
+    <servlet-name>Booking_EmployeeServletCreate</servlet-name>
+    <servlet-class>booking_employee.web.servlet.Booking_EmployeeServletCreate</servlet-class>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>Entity1ServletDelete</servlet-name>
-    <url-pattern>/Entity1ServletDelete</url-pattern>
+    <servlet-mapping>
+    <servlet-name>Booking_EmployeeServletCreate</servlet-name>
+    <url-pattern>/Booking_EmployeeServletCreate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Booking_EmployeeServletRead</display-name>
+    <servlet-name>Booking_EmployeeServletRead</servlet-name>
+    <servlet-class>booking_employee.web.servlet.Booking_EmployeeServletRead</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>Booking_EmployeeServletRead</servlet-name>
+    <url-pattern>/Booking_EmployeeServletRead</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Booking_EmployeeServletUpdate</display-name>
+    <servlet-name>Booking_EmployeeServletUpdate</servlet-name>
+    <servlet-class>booking_employee.web.servlet.Booking_EmployeeServletUpdate</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>Booking_EmployeeServletUpdate</servlet-name>
+    <url-pattern>/Booking_EmployeeServletUpdate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>Booking_EmployeeServletDelete</display-name>
+    <servlet-name>Booking_EmployeeServletDelete</servlet-name>
+    <servlet-class>booking_employee.web.servlet.Booking_EmployeeServletDelete</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>Booking_EmployeeServletDelete</servlet-name>
+    <url-pattern>/Booking_EmployeeServletDelete</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -109,6 +244,80 @@
     <servlet-name>findAll</servlet-name>
     <url-pattern>/findAll</url-pattern>
   </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>AvailableResource</display-name>
+    <servlet-name>AvailableResource</servlet-name>
+    
+    <servlet-class>resource.web.servlet.AvailableResource</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AvailableResource</servlet-name>
+    <url-pattern>/AvailableResource</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description></description>
+    <display-name>findUserBooking</display-name>
+    <servlet-name>findUserBooking</servlet-name>
+    
+    <servlet-class>booking.web.servlet.findUserBooking</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findUserBooking</servlet-name>
+    <url-pattern>/findUserBooking</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>findBookedResources</display-name>
+    <servlet-name>findBookedResources</servlet-name>
+    
+    <servlet-class>booking.web.servlet.findBookedResources</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findBookedResources</servlet-name>
+    <url-pattern>/findBookedResources</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <description></description>
+    <display-name>findSchoolName</display-name>
+    <servlet-name>findSchoolName</servlet-name>
+    
+    <servlet-class>school.web.servlet.findSchoolName</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findSchoolName</servlet-name>
+    <url-pattern>/findSchoolName</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <description></description>
+    <display-name>findCount</display-name>
+    <servlet-name>findCount</servlet-name>
+    
+    <servlet-class>booking_employee.web.servlet.findCount</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findCount</servlet-name>
+    <url-pattern>/findCount</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description></description>
+    <display-name>findMax</display-name>
+    <servlet-name>findMax</servlet-name>
+    
+    <servlet-class>booking.web.servlet.findMax</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>findMax</servlet-name>
+    <url-pattern>/findMax</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>login.jsp</welcome-file>
