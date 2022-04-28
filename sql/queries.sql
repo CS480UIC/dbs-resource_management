@@ -1,10 +1,9 @@
 ## 7.1
 
-CREATE VIEW available_resource AS
-	SELECT id,resource_name,available_capacity
+CREATE VIEW full_resource AS
+	SELECT *
     FROM resource
-    WHERE available_capacity > 0
-    ORDER BY id;
+    WHERE full_capacity > 25;
         
 CREATE VIEW school_details AS 
 	select name, address from school where head = 'Sandy';
