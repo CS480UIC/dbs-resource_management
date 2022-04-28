@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete Resource</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,26 @@
   </head>
   
   <body>
-  <h1>Delete Entity Resource</h1>
+  <h1>Delete Resource</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/ResourceServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="id" value="${resource.id }"/>
+		
+	ID    :<input type="text" name="id" value="${resource.id }" disabled/>
+	<br/>
+	School code：<input type="text" name="school_code" value="${resource.school_code }" disabled/>
+	<br/>
+	Resource Name	：<input type="text" name="resource_name" value="${resource.resource_name }" disabled/>
+	<br/>
+	Resource Location    :<input type="text" name="resource_location" value="${resource.resource_location }" disabled/>
+	<br/>
+	Full Capacity：<input type="text" name="full_capacity" value="${resource.full_capacity }" disabled/>
+	<br/>
+	Available Capacity	：<input type="text" name="available_capacity" value="${resource.available_capacity }" disabled/>
 	<br/>
 	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
-	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
-	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	<input type="submit" value="Delete Resource"/>
 </form>
 
 </body>

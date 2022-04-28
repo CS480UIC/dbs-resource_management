@@ -22,18 +22,18 @@
   
   <body>
   <h1>Create Booking Employee </h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	User ID:<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/Booking_EmployeeServletCreate'/>" method="post">
+	User ID:<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
-	Employee Name：<input type="password" name="password" value="${form.password }"/>
+	School Code：<input type="text" name="school_code" value="${form.school_code }"/>
+	<span style="color: red; font-weight: 900">${errors.school_code }</span>
+	<br/>
+	Employee Name：<input type="text" name="employee_name" value="${form.employee_name }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_name }</span>
+	<br/>
+	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Grade：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Password：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 
 	<input type="submit" value="Create Booking Employee"/>

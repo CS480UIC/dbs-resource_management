@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Resource Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,15 +21,22 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Resource Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+	ID    :<input type="text" name="id" value="${resource.id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	School code：<input type="text" name="school_code" value="${resource.school_code }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Resource Name	：<input type="text" name="resource_name" value="${resource.resource_name }" disabled/>
 	<br/>
+	Resource Location    :<input type="text" name="resource_location" value="${resource.resource_location }" disabled/>
+	<br/>
+	Full Capacity：<input type="text" name="full_capacity" value="${resource.full_capacity }" disabled/>
+	<br/>
+	Available Capacity	：<input type="text" name="available_capacity" value="${resource.available_capacity }" disabled/>
+	<br/>
+	
 </form>
 
 <button onclick="window.location.href='<c:url value='/jsps/main.jsp'/>'">Continue</button>

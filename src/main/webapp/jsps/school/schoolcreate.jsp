@@ -22,24 +22,24 @@
   
   <body>
   <h1>Create School</h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	School Code: <input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/SchoolServletCreate'/>" method="post">
+	School Code: <input type="text" name="code" value="${form.code }"/>
+	<span style="color: red; font-weight: 900">${errors.code }</span>
 	<br/>
-	Name：<input type="password" name="password" value="${form.password }"/>
+	Name：<input type="text" name="name" value="${form.name }"/>
+	<span style="color: red; font-weight: 900">${errors.name }</span>
+	<br/>
+	Address：<input type="text" name="address" value="${form.address }"/>
+	<span style="color: red; font-weight: 900">${errors.address }</span>
+	<br/>
+	Head：<input type="text" name="head" value="${form.head }"/>
+	<span style="color: red; font-weight: 900">${errors.head }</span>
+	<br/>
+	LoginID：<input type="text" name="login_id" value="${form.login_id }"/>
+	<span style="color: red; font-weight: 900">${errors.login_id }</span>
+	<br/>
+	Password：<input type="password" name="password" value="${form.password }"/>
 	<span style="color: red; font-weight: 900">${errors.password }</span>
-	<br/>
-	Address：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Head：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	LoginID：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
-	<br/>
-	Password：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
 	<br/>
 	<input type="submit" value="Create School"/>
 </form>

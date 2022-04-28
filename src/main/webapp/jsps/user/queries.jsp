@@ -22,9 +22,21 @@
   </head>
   
   <body>
-    <h1>Welcome to the Demo</h1>
+    <h1>List of queries</h1>
     <br>
     <a href="<c:url value='/findAll'/>" target="body">Please list all the user in the table</a>&nbsp;&nbsp;
+ 	<br>
+    <a href="<c:url value='/AvailableResource'/>" target="body">Please list all the available resource</a>&nbsp;&nbsp;
+ 	<br>
+    <a href="<c:url value='/findUserBooking'/>" target="body">Please list all the booking for a user</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findBookedResources'/>" target="body">Please list all the employee name for the resources</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findSchoolName'/>" target="body">Please list all the school name</a>&nbsp;&nbsp;
+    <br>
+    <a href="<c:url value='/findCount'/>" target="body">Please list the count of schools</a>&nbsp;&nbsp;
+  	<br>
+    <a href="<c:url value='/findMax'/>" target="body">Please list the resource boooked for maximum hours</a>&nbsp;&nbsp;
  
     
   </body>

@@ -23,10 +23,11 @@
   <body>
   <h1>Read Booking</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletRead'/>" method="post">
+<form action="<c:url value='/BookingServletRead'/>" method="post">
 	<input type="hidden" name="method" value="regist"/>
-	Booking ID:<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	
+	Booking ID :<input type="text" name="booking_id" value="${form.booking_id }"/>
+	<span style="color: red; font-weight: 900">${errors.booking_id }</span>
 	<br/>
 
 	<input type="submit" value="Read Booking"/>

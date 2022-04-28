@@ -22,21 +22,24 @@
   
   <body>
   <h1>Create Resource </h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	ID:<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/ResourceServletCreate'/>" method="post">
+	ID:<input type="text" name="id" value="${form.id }"/>
+	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
-	Resource Name：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	School code:<input type="text" name="code" value="${form.code }"/>
+	<span style="color: red; font-weight: 900">${errors.code }</span>
 	<br/>
-	Resource Location：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Resource Name：<input type="text" name="resource_name" value="${form.resource_name }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_name }</span>
 	<br/>
-	Full Capacity：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Resource Location：<input type="text" name="resource_location" value="${form.resource_location }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_location }</span>
 	<br/>
-	Available Capacity：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Full Capacity：<input type="text" name="full_capacity" value="${form.full_capacity }"/>
+	<span style="color: red; font-weight: 900">${errors.full_capacity }</span>
+	<br/>
+	Available Capacity：<input type="text" name="available_capacity" value="${form.available_capcity }"/>
+	<span style="color: red; font-weight: 900">${errors.available_capacity }</span>
 	<br/>
 	<input type="submit" value="Create Resource"/>
 </form>

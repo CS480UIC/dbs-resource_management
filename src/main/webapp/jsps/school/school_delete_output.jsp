@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Delete Entity</title>
+    <title>Delete School</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,19 +21,25 @@
   </head>
   
   <body>
-  <h1>Delete Entity</h1>
+  <h1>Delete School</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/SchoolServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="delete"/>
-		<input type="hidden" name="username" value="${entity1.username }"/>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+		<input type="hidden" name="code" value="${school.code }"/>
+		
+	Code    :<input type="text" name="code" value="${school.code }" disabled/>
 	<br/>
-	
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	Name：<input type="text" name="name" value="${school.name }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Address	：<input type="text" name="address" value="${school.address }" disabled/>
 	<br/>
-	<input type="submit" value="Delete Entity1"/>
+	Head    :<input type="text" name="head" value="${school.head }" disabled/>
+	<br/>
+	LoginID ：<input type="text" name="login_id" value="${school.login_id }" disabled/>
+	<br/>
+	Password	：<input type="text" name="password" value="${school.password }" disabled/>
+	<br/>
+	<input type="submit" value="Delete School"/>
 </form>
 
 </body>

@@ -22,21 +22,28 @@
   
   <body>
   <h1>Create Booking </h1>
-<form action="<c:url value='/Entity1ServletCreate'/>" method="post">
-	Booking ID:<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+<form action="<c:url value='/BookingServletCreate'/>" method="post">
+	
+	Booking ID:<input type="text" name="booking_id" value="${form.booking_id }"/>
+	<span style="color: red; font-weight: 900">${errors.booking_id }</span>
 	<br/>
-	Booked Capacity：<input type="password" name="password" value="${form.password }"/>
-	<span style="color: red; font-weight: 900">${errors.password }</span>
+	Employee User ID:<input type="text" name="employee_user_id" value="${form.employee_user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.employee_user_id }</span>
 	<br/>
-	Booking Slot：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Resource ID:<input type="text" name="resource_id" value="${form.resource_id }"/>
+	<span style="color: red; font-weight: 900">${errors.resource_id }</span>
 	<br/>
-	Number of hours：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Booked Capacity：<input type="text" name="booked_capacity" value="${form.booked_capacity }"/>
+	<span style="color: red; font-weight: 900">${errors.booked_capacity }</span>
 	<br/>
-	Notes：<input type="text" name="email" value="${form.email }"/>
-	<span style="color: red; font-weight: 900">${errors.email }</span>
+	Booking Slot：<input type="text" name="booking_slot" value="${form.booking_slot }"/>
+	<span style="color: red; font-weight: 900">${errors.booking_slot }</span>
+	<br/>
+	Number of hours：<input type="text" name="number_of_hours" value="${form.number_of_hours }"/>
+	<span style="color: red; font-weight: 900">${errors.number_of_hours }</span>
+	<br/>
+	Notes：<input type="text" name="notes" value="${form.notes }"/>
+	<span style="color: red; font-weight: 900">${errors.notes }</span>
 	<br/>
 	<input type="submit" value="Create Booking"/>
 </form>

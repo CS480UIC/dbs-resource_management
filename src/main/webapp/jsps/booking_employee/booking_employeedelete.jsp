@@ -22,10 +22,10 @@
   
   <body>
   <h1>Delete Booking Employee</h1>
-<form action="<c:url value='/Entity1ServletDelete'/>" method="post">
+<form action="<c:url value='/Booking_EmployeeServletDelete'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	Delete Booking Employee :<input type="text" name="username" value="${form.username }"/>
-	<span style="color: red; font-weight: 900">${errors.username }</span>
+	User ID :<input type="text" name="user_id" value="${form.user_id }"/>
+	<span style="color: red; font-weight: 900">${errors.user_id }</span>
 	<br/>
 	<input type="submit" value="Delete Booking Employee"/>
 </form>

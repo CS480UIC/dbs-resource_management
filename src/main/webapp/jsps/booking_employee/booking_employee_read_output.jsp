@@ -6,7 +6,7 @@
 <html>
   <head>
     
-    <title>Read Entity Output</title>
+    <title>Read Booking Employee Output</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -21,14 +21,17 @@
   </head>
   
   <body>
-  <h1>Read Entity Output</h1>
+  <h1>Read Booking Employee Output</h1>
 <p style="color: red; font-weight: 900">${msg }</p>
 <form>
-	User    :<input type="text" name="username" value="${entity1.username }" disabled/>
+
+	User ID:<input type="text" name="user_id" value="${booking_employee.user_id }" disabled/>
 	<br/>
-	Password：<input type="text" name="password" value="${entity1.password }" disabled/>
+	School Code：<input type="text" name="school_code" value="${booking_employee.school_code }" disabled/>
 	<br/>
-	Email	：<input type="text" name="email" value="${entity1.email }" disabled/>
+	Employee Name：<input type="text" name="employee_name" value="${booking_employee.employee_name }" disabled/>
+	<br/>
+	Password：<input type="text" name="password" value="${booking_employee.password }" disabled/>
 	<br/>
 </form>
 

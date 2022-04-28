@@ -8,16 +8,16 @@
 
 </head>
 <body>
-	<h3 align="center"> Max hours Booking </h3>
+	<h3 align="center"> Booking Details </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>resource_id</th>
-		<th>number_of_hours</th>
+		<th>booking_id</th>
+		<th>employee_user_id</th>
 	</tr>
-<c:forEach items="${MaxBookingList}" var="booking">
+<c:forEach items="${BookingList}" var="booking">
 	<tr>
-		<td>${booking.resource_id}</td>
-		<td>${booking.number_of_hours}</td>
+		<td>${booking.booking_id}</td>
+		<td>${booking.employee_user_id}</td>
 	</tr>
 </c:forEach>
 </table>

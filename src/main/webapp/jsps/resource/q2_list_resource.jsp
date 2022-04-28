@@ -8,16 +8,18 @@
 
 </head>
 <body>
-	<h3 align="center"> Max Hour Booking </h3>
+	<h3 align="center"> Available Resource </h3>
 	<table border="1" width="70%" align="center">
 	<tr>
-		<th>resource_id</th>
-		<th>number_of_hours</th>
+		<th>ID</th>
+		<th>Resource name</th>
+		<th>Available capacity</th>
 	</tr>
-<c:forEach items="${MaxHourList}" var="max">
+<c:forEach items="${ResourceList}" var="resource">
 	<tr>
-		<td>${max.resource_id}</td>
-		<td>${max.number_of_hours}</td>
+		<td>${resource.id}</td>
+		<td>${resource.resource_name}</td>
+		<td>${resource.available_capacity}</td>
 	</tr>
 </c:forEach>
 </table>
