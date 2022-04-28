@@ -5,14 +5,14 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-
-
+import java.util.ArrayList;
+import java.util.List;
 
 //import java.util.ArrayList;
 //import java.util.List;
 
 import booking_employee.domain.Booking_Employee;
+import school.domain.SchoolName;
 
 /**
  * DDL functions performed in database
@@ -22,12 +22,12 @@ public class Booking_EmployeeDao {
 	/**
 	 * user name to connect to the database 
 	 */
-	private String MySQL_user = "resource_management"; //TODO change user
+	private String MySQL_user = "resource_management"; 
 	
 	/**
 	 * password of your user_id to connect to the database
 	 */
-	private String MySQL_password = "resource"; //TODO change password
+	private String MySQL_password = "resource";
 
 	public Booking_Employee findByUserid(String user_id) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
 		Booking_Employee booking_employee = new Booking_Employee();
@@ -127,5 +127,28 @@ public class Booking_EmployeeDao {
 		} catch(SQLException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public List<Object> findCount() throws InstantiationException, IllegalAccessException, ClassNotFoundException{
+		List<Object> list = new ArrayList<>();
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connect = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/resource_management", MySQL_user, MySQL_password);
+			String sql = "select school_code, COUNT(*) as count\n"
+					+ "from booking_employee\n"
+					+ "group by school_code";
+			PreparedStatement preparestatement = connect.prepareStatement(sql); 
+			ResultSet resultSet = preparestatement.executeQuery();			
+			while(resultSet.next()){
+				Booking_Employee booking_employee = new Booking_Employee();			
+				booking_employee.setSchool_code(resultSet.getString("school_code"));
+				booking_employee.setCount(resultSet.getInt("count"));
+	    		list.add(booking_employee);
+			 }
+			connect.close();
+		} catch(SQLException e) {
+			throw new RuntimeException(e);
+		}
+		return list;
 	}
 }

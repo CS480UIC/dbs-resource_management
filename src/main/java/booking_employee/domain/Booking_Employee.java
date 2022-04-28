@@ -6,7 +6,7 @@ public class Booking_Employee {
 	private String school_code; 
 	private String employee_name;
 	private String password;
-	
+	private Integer count;
 	
 	public String getUser_id() {
 		return user_id;
@@ -44,6 +44,15 @@ public class Booking_Employee {
 	public String toString() {
 		return "Booking_Employee [ user_id=" + user_id + ",school_code=" + school_code +", employee_name=" + employee_name + ", password="
 				+ password + "]";
+	}
+	
+	public Integer getCount() {
+		return count;
+	}
+	public void setCount(Integer count) {
+		// TODO Auto-generated method stub
+		this.count = count;
+		
 	}
 
 }
