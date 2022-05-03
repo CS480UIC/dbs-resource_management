@@ -24,7 +24,7 @@
   <h1>Update</h1>
 <form action="<c:url value='/ResourceServletUpdate'/>" method="post">
 	<input type="hidden" name="method" value="search"/>
-	User ID  :<input type="text" name="id" value="${form.id }"/>
+	Resource ID  :<input type="text" name="id" value="${form.id }"/>
 	<span style="color: red; font-weight: 900">${errors.id }</span>
 	<br/>
 	<input type="submit" value="Update Resource"/>
